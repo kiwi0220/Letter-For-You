@@ -1,0 +1,131 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face{
+font-family: 'pixelify';
+src: url('PixelifySans-VariableFont_wght.ttf') format('truetype');
+}
+
+h1{
+  color: #950F4D ;
+}
+h2{
+  color: #f26a8d;
+}
+body{
+  background-image: url("heart-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  font-family: 'pixelify';
+  font-size: 20px;
+}
+
+.start-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#cursor {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+  color: #A3528D;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Optional: add a little delay before typing starts */
+h1 {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+#typewriter-text {
+  color: #950F4D; /* same as h1 */
+  font-family: inherit;
+  font-size: inherit;
+}
+
+body.no-page{
+  background-image: none;
+  background-color: #ffffff;
+}
+
+body.no-page .links {
+  position: relative;
+  z-index: 10;
+}
+.cats{
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.answerbuttons{
+  text-align: center;
+  word-spacing: 20px;
+  
+}
+.links{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+  padding: 15px 20px;
+  border: 2px solid #A3528D;
+  border-radius: 10px;
+  background-color: #AC9FBB;
+}
+.mammalsreacting{
+    max-width: 350px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 10s ease-out, opacity 10s ease-out;
+  transform-origin: center;
+  opacity: 0.7;
+}
+.mammalsreacting.scale-in {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.mammalsreacting:not(.scale-in) {
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.envelope {
+  width: 350px;
+  transition: transform 0.3s ease;
+  animation: pulse 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
