@@ -8,24 +8,14 @@
   <link href="style.css?v=8" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
-  <h1><span id="typewriter-text"></span><span id="cursor">|</span></h1>
-  <img src="catsinlove.jpg" class= "cats">
+<body class="start-page">
+  <h1>Letter For Luísa </h1>
+  <a href="index2.html">
+    <img src="envelope.png" class="envelope" id="envelope">
+</a>
+<audio id="popSound" src="pageflip.mp3" type="audio/mpeg" preload="auto"></audio>
 
-  <div class = "answerbuttons">
-    <a href="yes.html" class="links">yes</a>
-    <a href="no.html" class="links">no</a>
-  </div>
-  <audio id="typeSound">
-      <source src="keyboard.mp3" type="audio/mpeg">
-    </audio>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const audio = document.getElementById('typeSound');
-        audio.play().catch(e => console.log("Autoplay blocked:", e));
-  });
-    </script>
-   <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
